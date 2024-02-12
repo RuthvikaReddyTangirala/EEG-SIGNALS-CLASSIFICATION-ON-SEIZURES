@@ -1,1 +1,3 @@
 data/*
+keras_tuner_dir/*
+src/__pycache__/*
