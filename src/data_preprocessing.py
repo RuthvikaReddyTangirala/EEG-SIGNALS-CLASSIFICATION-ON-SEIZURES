@@ -171,7 +171,7 @@ plt.plot(x, y )
 
 plt.show()
 
-df.to_csv("data/data_preprocessed.csv") #saving the preprocessed dataset
+df.to_csv("data/data_preprocessed.csv", index=0) #saving the preprocessed dataset
 """From the samples timeseries from each set, it can be observed that  
 A and B looks normal  
 C has occasional spikes  
