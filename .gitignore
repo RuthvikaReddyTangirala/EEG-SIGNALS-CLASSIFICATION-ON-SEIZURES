@@ -1,3 +1,4 @@
 data/*
 keras_tuner_dir/*
 src/__pycache__/*
+model/*

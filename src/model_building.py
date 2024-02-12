@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import xgboost as xgb
 import warnings
+import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -176,5 +177,18 @@ print("Summary of RNN model\n", rnn_final_model.summary())
 
 # Train the final model
 rnn_final_model.fit(X_train, y_train, epochs=100, batch_size=32, validation_split=0.2)
+
+# save the model to disk
+filename = r'model\random_forest.sav'
+
+pickle.dump(best_rf, open(filename, 'wb'))
+
+filename = r'model\xg_boost.sav'
+
+pickle.dump(best_xgb, open(filename, 'wb'))
+
+filename = r'model\rnn.sav'
+
+pickle.dump(rnn_final_model, open(filename, 'wb'))
 
 print("successfully ran")
