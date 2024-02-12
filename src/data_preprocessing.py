@@ -2,29 +2,7 @@
 #importing all the necessary libraries
 import os
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-import warnings
-import xgboost as xgb
-from scipy.signal import welch
-from scipy.stats import entropy
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from xgboost import XGBClassifier
-from sklearn.model_selection import GridSearchCV, train_test_split
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import SimpleRNN, Dense, Dropout
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras import layers
-from tensorflow import keras
-from tensorflow.keras.optimizers import Adam
-from kerastuner.tuners import RandomSearch
-
-warnings.filterwarnings('ignore')
 
 """# Data Preprocessing
 
