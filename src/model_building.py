@@ -12,7 +12,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 from sklearn.model_selection import GridSearchCV, train_test_split
-from feature_engineering import feature_df
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import SimpleRNN, Dense, Dropout
@@ -27,6 +26,8 @@ warnings.filterwarnings('ignore')
 
 ### Split the data into training, validation, and test sets.
 """
+
+feature_df = pd.read_csv(r"data\feature_df.csv")
 
 # Assuming feature_df is your DataFrame with features
 # 'file_name' column is dropped as it's not used for training

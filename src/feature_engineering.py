@@ -152,4 +152,6 @@ def labelling(value):
 # Create a new column based on the condition
 df['label'] = df['file_set'].apply(labelling)
 feature_df['label'] = feature_df['file_set'].apply(labelling)
-print("Displaying the dataframe\n",df)
+print("Displaying the dataframe\n", df)
+
+feature_df.to_csv(r"data\feature_df.csv")
