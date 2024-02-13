@@ -11,6 +11,10 @@ strategies. This research leverages the high-resolution temporal data provided b
 recordings to identify distinctive patterns that differentiate between normal and abnormal 
 brain activity, a step forward in the field of biomedical engineering and neuroscience. 
 
+## Dataset Source
+
+https://www.ukbonn.de/epileptologie/arbeitsgruppen/ag-lehnertz-neurophysik/downloads/
+
 ## Installation
 Prerequisites
 Python 3.x
@@ -27,8 +31,8 @@ cd EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES
 ##### Install the required dependencies:
 pip install -r requirements.txt
 
-
-
+##### Storing the data
+Unzip all the five folders and store it in the path data\data
 
 ## Overview and Data Preprocessing of Dataset
 Data preprocessing is done on electroencephalogram (EEG) data that is saved in text files. Each file's content is read, ASCII data is converted to integers, and the data is arranged into a DataFrame. Filenames, sample indices, and matching EEG data are all displayed in a column of the DataFrame. By presenting details about the DataFrame, descriptive statistics, and sample EEG graphs for each file, the code offers more insights into the dataset.  
