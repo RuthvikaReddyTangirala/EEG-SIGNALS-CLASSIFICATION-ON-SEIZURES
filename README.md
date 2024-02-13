@@ -16,10 +16,10 @@ brain activity, a step forward in the field of biomedical engineering and neuros
 https://www.ukbonn.de/epileptologie/arbeitsgruppen/ag-lehnertz-neurophysik/downloads/
 
 ## Installation
-Prerequisites
-Python 3.x
-pip or conda
-Git (for cloning the repository)
+- Prerequisites
+- Python 3.x
+- pip or conda
+- Git (for cloning the repository)
 
 ## Steps
 ##### Clone the repository:
