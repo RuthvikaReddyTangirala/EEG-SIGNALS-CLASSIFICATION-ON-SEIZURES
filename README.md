@@ -11,6 +11,25 @@ strategies. This research leverages the high-resolution temporal data provided b
 recordings to identify distinctive patterns that differentiate between normal and abnormal 
 brain activity, a step forward in the field of biomedical engineering and neuroscience. 
 
+## Installation
+Prerequisites
+Python 3.x
+pip or conda
+Git (for cloning the repository)
+
+## Steps
+##### Clone the repository:
+git clone https://github.com/RuthvikaReddyTangirala/EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES.git
+
+##### Navigate to the project directory:
+cd EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES
+
+##### Install the required dependencies:
+pip install -r requirements.txt
+
+
+
+
 ## Overview and Data Preprocessing of Dataset
 Data preprocessing is done on electroencephalogram (EEG) data that is saved in text files. Each file's content is read, ASCII data is converted to integers, and the data is arranged into a DataFrame. Filenames, sample indices, and matching EEG data are all displayed in a column of the DataFrame. By presenting details about the DataFrame, descriptive statistics, and sample EEG graphs for each file, the code offers more insights into the dataset.  
  
@@ -38,5 +57,39 @@ All the files have the same number of samples (4,097), which indicates a consist
 Each .txt file is encoded into 4097 samples and all F.txt files are coded as 1, N as 2, O as 3, S as 4, Z as 5. File set has also been named to F as D, N as C, O as B, S as E, Z as A. 
  
 After performing all the steps, the totals rows are set to be 500 and columns are 4100. 
+
+## Feature Extraction 
+ 
+Feature extraction involves selecting and transforming relevant information from raw data to create a concise set of features that capture essential patterns, reducing dimensionality and improving model performance 
+Two distinct approaches are employed for feature extraction from EEG signals: time-domain and frequency-domain. 
+ 
+##### Time Domain Features: 
+From the time domain EEG data, the extract features time domain function computes statistical quantities including mean, variance, root mean square (RMS), and standard deviation. These characteristics record the fundamental amplitude and variability of the signal. 
+ 
+![image](https://github.com/RuthvikaReddyTangirala/EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES/assets/113473457/4aea883b-174c-4be7-95ec-96dbcf080936)
+
+ 
+##### Frequency Domain Features: 
+The Power Spectral Density (PSD) may be computed using functions like calculate_psd. For given frequency bands (delta, theta, alpha, beta, and gamma), functions like calculate_peak_frequency and bandpower can be used to extract features like peak frequency and power. Understanding the distribution of signal strength among various frequency components is made possible by these characteristics. 
+  
+![image](https://github.com/RuthvikaReddyTangirala/EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES/assets/113473457/93c18522-9669-4ee3-8b87-9cd8b5fffb38)
+
+
+Following their extraction, the features are arranged into a new DataFrame that includes properties in the temporal and frequency domains. The last piece of code examines the correlations between time-domain characteristics (variance, standard deviation, and RMS) and the mean value for each EEG signal is visualized using scatterplot. Because the scatterplots are color-coded according to the file code, it is possible to visually evaluate how various files or categories could display unique patterns in the feature space. 
+
+ ![image](https://github.com/RuthvikaReddyTangirala/EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES/assets/113473457/53e9d9ba-c34e-4ba8-8503-4bafc7c94600)
+
+  
+From the Above graphs based on time-based features it can be observed that values of Set S differ from all others significantly, Set D values has occasionally differed from other. 
+ 
+From the given paper: 
+ 
+Volunteers were relaxed in an awake state with eyes open ~A! and eyes closed ~B! respectively. Sets C, D, and E originated from our EEG archive of presurgical diagnosis. For the present study EEGs from five patients were selected, all of whom had achieved complete seizure control after resection of one of the hippocampal formations, which was therefore correctly diagnosed to be the epileptogenic zone ~cf. Segments in set D were recorded from within the epileptogenic zone, and those in set C from the hippocampal formation of the opposite hemisphere of the brain. While sets C and D contained only activity measured during seizure free intervals, set E only contained seizure activity. Here segments were selected from all recording sites exhibiting ictal activity. 
+ 
+Hence it is given that Set E has been collected during activity and it can also be observed in the above charts. Labelling the rows from Set E as 1 indicating it is a seizure. 
+ 
+![image](https://github.com/RuthvikaReddyTangirala/EEG-SIGNALS-CLASSIFICATION-ON-SEIZURES/assets/113473457/753070ce-8d1a-4c02-80fe-48e79e7c59ff)
+
+ 
 
 
