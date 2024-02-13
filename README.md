@@ -16,7 +16,7 @@ brain activity, a step forward in the field of biomedical engineering and neuros
 https://www.ukbonn.de/epileptologie/arbeitsgruppen/ag-lehnertz-neurophysik/downloads/
 
 ## Installation
-- Prerequisites
+### Prerequisites
 - Python 3.x
 - pip or conda
 - Git (for cloning the repository)
@@ -249,4 +249,4 @@ The comprehensive analysis of EEG data classification has underscored the capabi
 ### Future Work: 
 Further investigation is warranted to enhance the accuracy and generalizability of these models across more diverse and larger datasets, which may encompass a broader spectrum of seizure types and patient backgrounds. Advancements in deep learning, particularly in convolutional neural networks (CNNs) and recurrent neural networks (RNNs), could be leveraged to handle multi-dimensional EEG data, providing a more nuanced understanding of the brain's electrical activity. Another promising direction is the real-time application of these models in clinical and ambulatory settings, which could lead to proactive seizure detection systems. This could not only improve patient outcomes but also catalyze the development of personalized treatment plans. Moreover, the intersection of EEG data analysis with other physiological data through multi-modal approaches may offer new insights into the mechanisms underlying epilepsy, facilitating the advent of holistic and patient-centric healthcare solutions. 
 
-
+For any questions or further information, please reach out to Ruthvika Reddy Tangirala at ruthvikareddytangirala20@gmail.com (or) through LinkedIn www.linkedin.com/in/ruthvikareddytangirala
